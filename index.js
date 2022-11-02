@@ -8,7 +8,7 @@ const express = require('express')
 const routers = require('./src/routers')
 
 const app = express()
-const PORT = process.env.PORT
+const PORT = 5000
 
 // add middleware
 app.use(express.json()) // bisa pake bodyParser
