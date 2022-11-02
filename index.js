@@ -8,7 +8,7 @@ const express = require('express')
 const routers = require('./src/routers')
 
 const app = express()
-const PORT = 5000
+const PORT_APP = process.env.PORT_APP
 
 // add middleware
 app.use(express.json()) // bisa pake bodyParser
@@ -19,6 +19,6 @@ app.get('/', (req, res)=>{
     })
 })
 app.use('/v1', routers)
-app.listen(PORT, ()=>{
-    console.log(`server running in port ${PORT}`);
+app.listen(PORT_APP, ()=>{
+    console.log(`server running in port ${PORT_APP}`);
 })
